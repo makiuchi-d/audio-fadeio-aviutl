@@ -5,9 +5,9 @@ CC = BCC32
 COPT = -tWD -O1 -O2
 
 OBJ = fadeio.obj
-AUF = fadeio.auf
+AUF = audio_fadeio.auf
 
-filter.auf: $(OBJ)
+$(AUF): $(OBJ)
 	$(CC) $(COPT) -e$(AUF) $(OBJ)
 
 fadeio.obj: fadeio.c filter.h
